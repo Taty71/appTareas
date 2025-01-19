@@ -1,0 +1,98 @@
+.todos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px 20px 20px 250px;   
+    width:100%;
+}
+
+.listaTodos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}   
+.elemTodo{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 30px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    width:750px;
+    justify-content: space-between;
+    padding: 10px;
+  
+}
+.elemTodo:hover{
+    background-color: #3f3e40;
+    color:#fff;
+    transition-duration: 0.4s;
+}
+
+.textC{
+    color: #2bbf50;
+    font-style: italic;
+    text-decoration: line-through;
+}
+.todo{
+    padding: 10px;
+    display:flexbox;
+    flex-direction: column;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    }
+.botones button{
+    background-color: #BCFFCB;
+    margin-top: 5px;
+    width: 100px;
+    padding: 5px;
+    border: 2px solid #90cfa1;
+    cursor: pointer;
+    height: 30px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:#0A3D62;
+   
+    text-align: center;
+    border-radius: 5px;
+}
+.elemTodo .eliminar:hover{
+    background-color: #840b0b;
+    color:#eee1e1;
+    transition-duration: 0.3s;
+    font-size: 0.8em;
+    border-radius: 8px;
+}
+
+.elemTodo .actualizar:hover{
+    background-color: #046516;
+    color:#eee1e1;
+    transition-duration: 0.3s;
+    font-size: 0.8em;
+    border-radius: 8px;
+}
+
+.todo .prioridad {
+    position: absolute; /* Posiciona el elemento absolutamente */
+    top: 10px; /* Alinea en la parte superior */
+    right: 10px; /* Alinea en la parte derecha */
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1em;
+    background-color: #07d589;
+    color: #0A3D62;
+    text-shadow: 0.5px 0.5px #1ff1ea;
+    font-weight: bold;
+    border: 2px solid #90cfa1;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}

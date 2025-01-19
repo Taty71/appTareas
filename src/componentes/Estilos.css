@@ -1,0 +1,153 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;/* Centra los elementos horizontalmente */
+    width:75%;
+    justify-content: center;
+}
+h1{
+    margin-left: 30px;
+
+}
+.inputF{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 20px 30px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+input:focus, .inputF:focus {
+    border: 2px solid #1DC084; /* Color verde */
+    outline: none; /* Quita el borde negro predeterminado */
+    box-shadow: 0 0 5px #1DC084; /* Añade un efecto de sombra */ /* Cambia el color del borde al hacer focus */
+}
+
+.error{
+    color: red;
+    font-size: 0.8em;
+    margin-left: 30px;
+}
+.inputCheck{
+    margin-left: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+   
+}
+
+/* Estilo base del checkbox */
+.check {
+    width: 25px;
+    height: 25px;
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    border: 2px solid #1DC084; /* Color del borde */
+    border-radius: 5px; /* Esquinas redondeadas (opcional) */
+    background-color: #f0f0f0; /* Color de fondo inicial */
+    cursor: pointer; /* Cambia el cursor a mano */
+    position: relative;
+    transition: all 0.3s ease; /* Transición suave para cambios de estado */
+}
+
+/* Cuando el checkbox está marcado */
+.check:checked {
+    background-color: #1DC084; /* Color de fondo al estar marcado */
+    border-color: #0b9c68; /* Cambia el color del borde */
+}
+
+
+/* Crear la marca con un pseudo-elemento */
+.check:checked::after {
+    content: '✔'; /* El check como texto */
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label{
+    margin-left: 20px;
+    font-weight: bold;
+    color: #3f3e40;
+    text-shadow:1px 1px #90cfa1;
+    font-size: 1.2rem;
+}
+/* Contenedor del select */
+.custom-select {
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Estilos para el select */
+.custom-select .inputF {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333; /* Color del texto */
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 2px solid #90cfa1; /* Color del borde (verde claro) */
+    border-radius: 5px; /* Bordes redondeados */
+    appearance: none; /* Elimina la flecha predeterminada */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Cambiar el fondo y el borde del select al hacer foco */
+.custom-select .inputF:focus {
+    background-color: #fff; /* Fondo blanco al hacer foco */
+    border-color: #1DC084; /* Borde verde más intenso al enfocar */
+    box-shadow: 0 0 5px rgba(29, 192, 132, 0.5); /* Efecto de sombra */
+    outline: none;
+}
+
+/* Estilo de las opciones dentro del select */
+.custom-select .inputF option {
+    color: #333; /* Color del texto en las opciones */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 10px;
+}
+
+/* Cambiar el fondo de las opciones seleccionadas */
+.custom-select .inputF option:checked {
+    background-color: #1DC084; /* Fondo verde para la opción seleccionada */
+    color: white; /* Texto blanco en la opción seleccionada */
+}
+/* Estilo para la opción seleccionada, pero no con el fondo azul por defecto */
+.custom-select .inputF:focus option {
+    background-color: #1DC084; /* Fondo verde para la opción seleccionada */
+    color: white; /* Texto blanco */
+}
+/* Estilo de las opciones al pasar el mouse */
+.custom-select .inputF option:hover {
+    background-color: #90cfa1; /* Fondo verde claro al pasar el mouse */
+    color: white; /* Texto blanco al hacer hover */
+}
+
+
+.btn{
+    background-color: #059862;
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid #90cfa1;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color:#0A3D62;
+    outline: none;
+}
+.btn:hover{
+    background-color: #3f3e40;
+    color: #ffffff;
+    border: 2px solid #90cfa1;
+   font-weight: bold;
+    transition-duration: 0.3s;
+    font-size: 1.2em;
+    border:1px solid #BCFFCB;
+}
