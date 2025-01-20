@@ -59,9 +59,9 @@
     }
 .botones button{
     background-color: #BCFFCB;
+    padding:5px;
     margin-top: 5px;
-    width: 100px;
-    padding: 5px;
+    width: 110px;
     border: 2px solid #90cfa1;
     cursor: pointer;
     height: 30px;
