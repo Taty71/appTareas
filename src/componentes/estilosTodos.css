@@ -85,7 +85,6 @@
     top: 10px; /* Alinea en la parte superior */
     right: 10px; /* Alinea en la parte derecha */
     padding: 5px;
-    border-radius: 5x;
     font-size: 1em;
     background-color: #07d589;
     color: #0A3D62;
@@ -94,6 +93,7 @@
     border: 2px solid #90cfa1;
     width: 100px;
     text-align: center;
+    margin-bottom: auto;
 }
 /* Desde 1124px hasta 768px */
 @media (max-width: 1124px) {
@@ -124,6 +124,8 @@
         width: 80px; /* Reduce el ancho */
         border-width: 1px; /* Reduce el grosor del borde */
     text-shadow: none; /* Elimina el sombreado del texto */
+    margin-bottom: auto;
+   
     }
 }
 
@@ -156,7 +158,9 @@
         padding: 5px; /* Reduce el padding */
         width: 80px; /* Reduce el ancho */
         border-width: 1px; /* Reduce el grosor del borde */
-    text-shadow: none; /* Elimina el sombreado del texto */
+        text-shadow: none; /* Elimina el sombreado del texto */
+        margin-bottom: auto;
+       
     }
 }
 /* Responsive hasta 591px */
@@ -190,6 +194,7 @@
         font-size: 0.8em; /* Reduce el tamaño del texto */
         padding: 5px; /* Ajusta el padding */
         margin-top: 10px;
+      
     }
 
     .botones {
@@ -238,5 +243,6 @@
         border-width: 1px; /* Reduce el grosor del borde */
         text-shadow: none; /* Elimina el sombreado del texto */
         margin-top: 10px;
+      
 }
 }

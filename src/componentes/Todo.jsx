@@ -13,7 +13,7 @@ const Todo = ({todo, deleteTodo, updateTodo}) => {
                             <button onClick={()=> deleteTodo(id)}className="eliminar">Eliminar</button>
                             <button onClick={()=> updateTodo(id)}className="actualizar">Actualizar</button>
                     </div>
-                    {priority && (<span className='prioridad'>Prioritario</span>)}
+                    {priority && (<span className='prioridad'>Prioritario</span>)}             
                 </div>
             </div>
         </li>
