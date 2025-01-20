@@ -14,7 +14,7 @@ const footerStyle = {
 const Footer = () => {
     return (
         <footer style={footerStyle}>
-            <h5>TyDevApp</h5>
+            <h5>DevApp - Taty</h5>
         </footer>
     );
 };
