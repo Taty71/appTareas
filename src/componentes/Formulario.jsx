@@ -32,7 +32,7 @@ const Formulario = ({addTodo})=> {
             return Swal.fire({
               icon: "error",
               title: "Oops...",
-              text: "Los campos titulo y descripción no pueden estar estar vacíos",
+              text: "Los campos titulo y descripción no pueden estar vacíos",
               customClass: {
                     popup: 'my-popup-size',
                     title: 'my-title-size',
