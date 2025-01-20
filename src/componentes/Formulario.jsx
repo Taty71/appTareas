@@ -14,6 +14,12 @@ const Formulario = ({addTodo})=> {
    
    //desestructuración de objetos d
    const {titulo, descripcion, priority, estado} = todo;
+// Opciones para el selector de estado
+    const opcionesEstado = [
+    { label: 'Pendiente', value: 'Pendiente' },
+    { label: 'Completado', value: 'Completado' },
+    { label: 'En Progreso', value: 'En Progreso' }
+  ];
 
    //const [error, setError] = useState(false);
     const handleSubmit = (e) => {
@@ -27,6 +33,10 @@ const Formulario = ({addTodo})=> {
               icon: "error",
               title: "Oops...",
               text: "Los campos titulo y descripción no pueden estar estar vacíos",
+              customClass: {
+                    popup: 'my-popup-size',
+                    title: 'my-title-size',
+                    content: 'my-content-size'}
              
             });
             
@@ -35,8 +45,8 @@ const Formulario = ({addTodo})=> {
            // id: Date.now(),
             id: Math.floor(Math.random() * 1000),
             ...todo,
-            estado: estado === "Completado" 
-        })
+            estado: estado === "Completado",
+        });
         //console.log(titulo, descripcion, priority, estado);
         Swal.fire({
             position: "center",
@@ -44,6 +54,10 @@ const Formulario = ({addTodo})=> {
             title: "Se agregaron los datos correctamente",
             showConfirmButton: false,
             timer: 1500,
+            customClass: {
+                popup: 'my-popup-size',
+                title: 'my-title-size',
+                content: 'my-content-size'}
           });
   
       // Enviar todo a un array!
@@ -81,6 +95,7 @@ const Formulario = ({addTodo})=> {
                     name="estado"
                     value={estado}
                     onChange={handleChange}
+                    option={opcionesEstado} // Pasa las opciones aquí
                 />
             <button type="submit" className='inputF btn'>Agregar</button>
         </form>

@@ -41,7 +41,7 @@
 }
 .todo{
     padding: 10px;
-    display:flexbox;
+    display:flex;
     flex-direction: column;
 }
 .botones{
@@ -60,9 +60,9 @@
     font-size: 0.8em;
     font-weight: bold;
     color:#0A3D62;
-   
     text-align: center;
     border-radius: 5px;
+    white-space: nowrap; /* Evita que el texto se divida */
 }
 .elemTodo .eliminar:hover{
     background-color: #840b0b;
@@ -84,15 +84,159 @@
     position: absolute; /* Posiciona el elemento absolutamente */
     top: 10px; /* Alinea en la parte superior */
     right: 10px; /* Alinea en la parte derecha */
-    padding: 10px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5x;
     font-size: 1em;
     background-color: #07d589;
     color: #0A3D62;
     text-shadow: 0.5px 0.5px #1ff1ea;
     font-weight: bold;
     border: 2px solid #90cfa1;
-    border-radius: 5px;
     width: 100px;
     text-align: center;
+}
+/* Desde 1124px hasta 768px */
+@media (max-width: 1124px) {
+    .todos {
+        margin: 10px auto; /* Centra los elementos horizontalmente */
+        width: 90%; /* Ajusta el ancho al 90% de la pantalla */
+    }
+
+    .listaTodos {
+        flex-direction: column; /* Cambia a columna para pantallas medianas */
+        align-items: stretch; /* Asegura que se expandan al ancho del contenedor */
+    }
+
+    .elemTodo {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 15px; /* Reduce padding */
+        font-size: 1em; /* Ajusta tamaño de fuente */
+    }
+
+    .botones {
+        flex-direction: row; /* Mantén los botones en fila */
+        gap: 20px; /* Reduce espacio entre botones */
+        justify-content: space-evenly; /* Distribuye botones uniformemente */
+    }
+    .todo .prioridad {
+        font-size: 0.8em; /* Reduce el tamaño del texto */
+        padding: 5px; /* Reduce el padding */
+        width: 80px; /* Reduce el ancho */
+        border-width: 1px; /* Reduce el grosor del borde */
+    text-shadow: none; /* Elimina el sombreado del texto */
+    }
+}
+
+/* Desde 768px hasta 480px */
+@media (max-width: 768px) {
+    .todos {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+    .elemTodo {
+        padding: 10px; /* Reduce padding */
+        font-size: 0.9em; /* Reduce ligeramente el texto */
+    }
+
+    .botones {
+        flex-direction: column; /* Coloca los botones en columna */
+        gap: 10px; /* Incrementa el espacio vertical */
+    }
+
+    .botones button {
+        width: 100%; /* Los botones ocuparán el 100% del ancho */
+        padding: 8px; /* Ajusta el padding para mayor comodidad */
+        font-size: 0.9em; /* Ajusta el tamaño del texto */
+        max-width: 180px; /* Asegura que el ancho no crezca demasiado */
+        min-width: 100px; /* Asegura que el ancho no sea menor a 100px */
+    }
+    .todo .prioridad {
+        font-size: 0.8em; /* Reduce el tamaño del texto */
+        padding: 5px; /* Reduce el padding */
+        width: 80px; /* Reduce el ancho */
+        border-width: 1px; /* Reduce el grosor del borde */
+    text-shadow: none; /* Elimina el sombreado del texto */
+    }
+}
+/* Responsive hasta 591px */
+@media (max-width: 591px) {
+    .todos {
+        flex-direction: column; /* Asegura disposición en columna */
+        margin: 10px auto; /* Centra el contenido horizontalmente */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Padding adicional para separación */
+    }
+
+    .listaTodos {
+        flex-direction: column; /* Elementos en columna */
+        align-items: center; /* Centra horizontalmente */
+        gap: 15px; /* Espacio entre elementos */
+        flex-wrap: nowrap; /* Evita que se envuelvan */
+    }
+
+    .elemTodo {
+        flex-direction: column; /* Los elementos internos también en columna */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Ajusta el padding */
+        font-size: 0.9em; /* Reduce ligeramente el tamaño del texto */
+        gap: 15px; /* Espacio entre elementos internos */
+    }
+
+    .todo .prioridad {
+        position: relative; /* Elimina la posición absoluta */
+        width: 100%; /* Ocupa el ancho completo del contenedor */
+        text-align: center; /* Centra el texto */
+        font-size: 0.8em; /* Reduce el tamaño del texto */
+        padding: 5px; /* Ajusta el padding */
+        margin-top: 10px;
+    }
+
+    .botones {
+        flex-direction: column; /* Coloca los botones en columna */
+        gap: 10px; /* Incrementa el espacio vertical entre botones */
+        width: 100%; /* Asegura el ancho completo */
+        align-items: center; /* Centra los botones */
+    }
+
+    .botones button {
+        width: 90%; /* Los botones ocuparán el 90% del ancho */
+        font-size: 0.9em; /* Reduce el tamaño del texto para pantallas muy pequeñas */
+        padding: 6px; /* Ajusta el padding */
+        max-width: 160px; /* Limita el tamaño máximo */
+        min-width: 90px; /* Evita que los botones se hagan demasiado pequeños */
+    }
+}
+
+/* Pantallas menores de 480px */
+@media (max-width: 480px) {
+    .todos {
+        margin: 5px; /* Reduce márgenes */
+        padding: 10px; /* Agrega un padding para evitar que el contenido quede pegado */
+    }
+
+    .elemTodo {
+        font-size: 0.8em; /* Texto más pequeño */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .botones {
+        gap: 5px; /* Menor espacio entre botones */
+    }
+
+    .botones button {
+        width: 90%; /* Los botones ocuparán el 90% del ancho */
+        font-size: 0.8em; /* Reduce el tamaño del texto para pantallas muy pequeñas */
+        padding: 6px; /* Ajusta el padding */
+        max-width: 160px; /* Limita el tamaño máximo */
+        min-width: 90px; /* Evita que los botones se hagan demasiado pequeños */
+    }
+    .todo .prioridad {
+        font-size: 0.7em; /* Texto más pequeño */
+        padding: 3px; /* Padding mínimo */
+        width: 70px; /* Ajusta el ancho */
+        border-width: 1px; /* Reduce el grosor del borde */
+        text-shadow: none; /* Elimina el sombreado del texto */
+        margin-top: 10px;
+}
 }
