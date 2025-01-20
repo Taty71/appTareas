@@ -45,7 +45,7 @@ const Formulario = ({addTodo})=> {
            // id: Date.now(),
             id: Math.floor(Math.random() * 1000),
             ...todo,
-            estado: estado === "Completado",
+            estado: estado,
         });
         //console.log(titulo, descripcion, priority, estado);
         Swal.fire({
@@ -61,6 +61,7 @@ const Formulario = ({addTodo})=> {
           });
   
       // Enviar todo a un array!
+      setTodo({ titulo: "", descripcion: "", priority: "True", estado: "Pendiente" });
     };
   
    {/* const MostrarError = () => (
@@ -80,7 +81,7 @@ const Formulario = ({addTodo})=> {
             <div className='header'>
                 <h4>En esta app puedes ir registrando tareas/actividades a realizar, darlas como prioridad y tacharlas del listado cuando estén realizadas</h4>
             </div>
-        <h1>Actividades</h1>    
+        <h1>Actividad</h1>    
         <form onSubmit={handleSubmit}>  
                              
             <input type="text" 

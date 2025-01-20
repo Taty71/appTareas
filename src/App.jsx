@@ -63,7 +63,13 @@ const App = () => {
   }
   const updateTodo = (id) => {
     const newTodos = todos.map(todo => { if(todo.id === id){
-      todo.estado = !todo.estado;
+      if (todo.estado === 'Pendiente') {
+        todo.estado = 'En Progreso';
+      } else if (todo.estado === 'En Progreso') {
+        todo.estado = 'Completado';
+      } else {
+        todo.estado = 'Pendiente';
+      }
     };
     return todo;
     })

@@ -47,6 +47,17 @@
     font-style: italic;
     text-decoration: line-through;
 }
+.textCo{
+    color: #2bbf50;
+    font-style: italic;
+}
+.textPendiente {
+    color: #770707;
+}
+
+.textEnProgreso {
+    color: #919106;
+}
 .todo{
     padding: 10px;
     display:flex;
