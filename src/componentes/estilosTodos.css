@@ -6,6 +6,9 @@
     margin-top: 20px 20px 20px 250px;   
     width:80%;
 }
+.todos h2{
+    margin-botton:15px;
+}
 .todo h4{
     color: #0A3D62;
     font-weight: bold;
