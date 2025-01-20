@@ -17,11 +17,12 @@
     font-size: 1em;
     margin: 0.1rem 0.5rem;
 }
-h1,h2{
+h1, h2{
     color: #0A3D62;
     font-weight: bold;
     text-shadow: 1px 1px 1px #ebffbc;
     margin-left: 30px;
+    text-align: center;
 
 }
 @media (max-width: 768px) {

@@ -32,7 +32,7 @@ const Formulario = ({addTodo})=> {
             return Swal.fire({
               icon: "error",
               title: "Oops...",
-              text: "Los campos titulo y descripción no pueden estar vacíos",
+              text: "Los campos tarea y descripción no pueden estar vacíos",
               customClass: {
                     popup: 'my-popup-size',
                     title: 'my-title-size',
@@ -77,6 +77,9 @@ const Formulario = ({addTodo})=> {
 
     return (
         <div className='form'> 
+            <div className='header'>
+                <h4>En esta app puedes ir registrando tareas/actividades a realizar, darlas como prioridad y tacharlas del listado cuando estén realizadas</h4>
+            </div>
         <h1>Actividades</h1>    
         <form onSubmit={handleSubmit}>  
                              
