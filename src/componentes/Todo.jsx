@@ -8,7 +8,7 @@ const Todo = ({todo, deleteTodo, updateTodo}) => {
                 <div>
                     <h4 className={estado ? 'textC' : ''}>{titulo}</h4>
                     <p className={estado ? 'textC' : ''}> {descripcion} </p>
-                    <p> {id} </p>
+                    {/*<p> {id} </p>*/}
                     <div className='botones'>
                             <button onClick={()=> deleteTodo(id)}className="eliminar">Eliminar tarea</button>
                             <button onClick={()=> updateTodo(id)}className="actualizar">Tarea realizada</button>
