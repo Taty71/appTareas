@@ -6,7 +6,12 @@
     margin-top: 20px 20px 20px 250px;   
     width:80%;
 }
-
+.todo h4{
+    color: #0A3D62;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #ebffbc;
+    margin-top: 15px;
+}
 .listaTodos{
     display: flex;
     flex-direction: column;
@@ -159,8 +164,7 @@
         width: 80px; /* Reduce el ancho */
         border-width: 1px; /* Reduce el grosor del borde */
         text-shadow: none; /* Elimina el sombreado del texto */
-        margin-bottom: auto;
-       
+        margin-bottom: 5px;  
     }
 }
 /* Responsive hasta 591px */
